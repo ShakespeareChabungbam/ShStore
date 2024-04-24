@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sh Store</h1>
+        <!-- Menu toggle button -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">Course</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Purchase</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="section-title">
+        <h2>Application section</h2>
+    </div>
+
+    <div class="app-container">
+        <div class="app-card" id="shnotes">
+            <img src="ShNotes.jpg" alt="ShNotes Icon" class="app-icon">
+            <h2 class="app-name">ShNotes</h2>
+            <p class="app-details">This is a basic Notes taking Application made using Flutter and sqflite database for storing your daily notes and reminders.</p>
+            <button class="download-button" onclick="downloadApp('shnotes.apk')">Download</button>
+        </div>
+        <div class="app-card" id="shcalculator">
+            <img src="ShCalculator.png" alt="ShCalculator Icon" class="app-icon">
+            <h2 class="app-name">ShCalculator</h2>
+            <p class="app-details">This is a basic calculator Application made using Flutter for calculating problems. It also has theme features.</p>
+            <button class="download-button" onclick="downloadApp('shcalculator.apk')">Download</button>
+        </div>
+    </div>
+
+    <script>
+        function downloadApp(apkUrl) {
+            var downloadButton = event.target;
+            downloadButton.innerText = 'Downloading...';
+            downloadButton.disabled = true;
+
+            // Create a temporary anchor element
+            var tempAnchor = document.createElement('a');
+            tempAnchor.href = apkUrl;
+            tempAnchor.setAttribute('download', '');
+            tempAnchor.style.display = 'none';
+            document.body.appendChild(tempAnchor);
+
+            // Trigger a click event on the temporary anchor
+            tempAnchor.click();
+
+            // Clean up
+            document.body.removeChild(tempAnchor);
+
+            // Simulate download completion after 2 seconds
+            setTimeout(function() {
+                downloadButton.innerText = 'Downloaded';
+            }, 2000);
+        }
+
+        // Menu toggle function
+        function toggleMenu() {
+            var navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
