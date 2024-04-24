@@ -37,7 +37,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
-    
+    transform: translateX(-5%);
 }
 
 nav ul li a:hover {
