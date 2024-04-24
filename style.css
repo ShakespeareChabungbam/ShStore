@@ -135,6 +135,20 @@ nav ul li a.active {
     margin: 5px 0;
 }
 
+/* Close button bars */
+.bar.close {
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transform: rotate(45deg); /* Rotate to form a cross */
+}
+
+.bar.close:nth-child(4) {
+    transform: rotate(-45deg); /* Rotate to form a cross */
+}
+
 /*Phone View*/
 /* Add this media query at the end of your CSS */
 
