@@ -197,6 +197,7 @@ nav ul li a.active {
     .menu-toggle {
         display: block;
         margin-right: 23px;
+        transform: translateY(-27%);
     }
 
     /* Adjust styles for mobile navigation */
