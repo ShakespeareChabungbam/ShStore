@@ -120,7 +120,6 @@ nav ul li a.active {
 
 /* Menu Toggle Button */
 .menu-toggle {
-    display: none; /* Hide by default */
     cursor: pointer;
     padding: 10px;
     position: absolute;
@@ -133,20 +132,70 @@ nav ul li a.active {
     height: 3px;
     background-color: white;
     margin: 5px 0;
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
 }
 
 /* Close button bars */
 .bar.close {
-    position: absolute;
     width: 25px;
     height: 3px;
     background-color: white;
     margin: 5px 0;
     transform: rotate(45deg); /* Rotate to form a cross */
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
 }
 
 .bar.close:nth-child(4) {
     transform: rotate(-45deg); /* Rotate to form a cross */
+}
+
+/* Adjust styles for mobile navigation */
+nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #101214;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    display: none;
+}
+
+nav ul.active {
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li a {
+    font-size: 18px;
+}
+
+/* Show menu toggle button */
+.menu-toggle .bar.close {
+    display: none; /* Initially hide close button bars */
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar.close {
+    display: block; /* Show close button bars */
 }
 
 /*Phone View*/
@@ -208,40 +257,5 @@ nav ul li a.active {
     .download-button {
         padding: 6px 12px; /* Adjust padding for download button */
         margin-top: 3px; /* Adjust margin-top for download button */
-    }
-
-    /* Show menu toggle button */
-    .menu-toggle {
-        display: block;
-        margin-right: 23px;
-        transform: translateY(-27%);
-    }
-
-    /* Adjust styles for mobile navigation */
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: #101214;
-        width: 100%;
-        position: absolute;
-        top: 60px; /* Adjust based on header height */
-        left: 0;
-        transition: all 0.3s ease-in-out;
-        display: none;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        font-size: 18px;
     }
 }
