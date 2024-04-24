@@ -19,7 +19,7 @@ header {
 
 header h1 {
     margin: 0;
-    transform: translateX(-3%);
+    transform: translateX(-5%);
 }
 
 nav ul {
@@ -37,6 +37,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
+    
 }
 
 nav ul li a:hover {
@@ -47,6 +48,7 @@ nav ul li a.active {
     font-weight: bold; /* Change to desired active style */
     font-size: 23px;
     text-decoration: underline;
+    transform: translateX(-5%);
 }
 
 .section-title {
