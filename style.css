@@ -159,13 +159,13 @@ nav ul li a.active {
     }
 
     .app-container {
-        padding-top: 10px; /* Adjust padding-top for app container */
+        padding-top: 6px; /* Adjust padding-top for app container */
     }
 
     .app-card {
         margin: 10px 20px; /* Adjust margin for app card */
-        width: 120px;
-        height: 220px;
+        width: 106px;
+        height: 200px;
     }
     .app-card h2 {
         font-size: 12px;
@@ -175,8 +175,8 @@ nav ul li a.active {
     }
 
     .app-icon {
-        width: 80px; /* Adjust width for app icon */
-        height: 80px; /* Adjust height for app icon */
+        width: 60px; /* Adjust width for app icon */
+        height: 60px; /* Adjust height for app icon */
         margin-bottom: 10px; /* Adjust margin for app icon */
     }
 
