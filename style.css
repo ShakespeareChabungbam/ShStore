@@ -135,20 +135,6 @@ nav ul li a.active {
     transition: transform 0.3s ease; /* Add transition for smooth effect */
 }
 
-/* Close button bars */
-.bar.close {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-    transform: rotate(45deg); /* Rotate to form a cross */
-    transition: transform 0.3s ease; /* Add transition for smooth effect */
-}
-
-.bar.close:nth-child(4) {
-    transform: rotate(-45deg); /* Rotate to form a cross */
-}
-
 /* Adjust styles for mobile navigation */
 nav ul {
     flex-direction: column;
@@ -178,10 +164,6 @@ nav ul li a {
 }
 
 /* Show menu toggle button */
-.menu-toggle .bar.close {
-    display: none; /* Initially hide close button bars */
-}
-
 .menu-toggle.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(-45deg);
 }
@@ -192,70 +174,4 @@ nav ul li a {
 
 .menu-toggle.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(45deg);
-}
-
-.menu-toggle.active .bar.close {
-    display: block; /* Show close button bars */
-}
-
-/*Phone View*/
-/* Add this media query at the end of your CSS */
-
-@media only screen and (max-width: 600px) {
-    header {
-        padding: px; /* Reduce padding for header */
-    }
-
-    header h1 {
-        font-size: 25px; /* Reduce font size for header title */
-    }
-
-    nav ul li {
-        margin-right: 10px; /* Reduce margin between navigation items */
-        font-size: 14px;
-    }
-
-    nav ul li a.active {
-        font-weight: bold; /* Change to desired active style */
-        font-size: 16px;
-    }
-
-    .section-title {
-        margin-top: 100px; /* Adjust margin-top for section title */
-    }
-
-    .app-container {
-        padding-top: 6px; /* Adjust padding-top for app container */
-    }
-
-    .app-card {
-        margin: 10px 20px; /* Adjust margin for app card */
-        width: 106px;
-        height: 200px;
-    }
-    .app-card h2 {
-        font-size: 12px;
-    }
-    .app-card p {
-        font-size: 9px;
-    }
-
-    .app-icon {
-        width: 60px; /* Adjust width for app icon */
-        height: 60px; /* Adjust height for app icon */
-        margin-bottom: 10px; /* Adjust margin for app icon */
-    }
-
-    .app-name {
-        font-size: 18px; /* Reduce font size for app name */
-    }
-
-    .app-details {
-        font-size: 14px; /* Reduce font size for app details */
-    }
-
-    .download-button {
-        padding: 6px 12px; /* Adjust padding for download button */
-        margin-top: 3px; /* Adjust margin-top for download button */
-    }
 }
