@@ -14,7 +14,6 @@
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
-            <!-- Add bars for close button -->
             <div class="bar close"></div>
             <div class="bar close"></div>
         </div>
@@ -74,6 +73,9 @@
 
         // Menu toggle function
         function toggleMenu() {
+            var menuToggle = document.querySelector('.menu-toggle');
+            menuToggle.classList.toggle('active');
+
             var navMenu = document.querySelector('nav ul');
             navMenu.classList.toggle('active');
         }
