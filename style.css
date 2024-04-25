@@ -38,6 +38,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 20px;
 }
 
 nav ul li a:hover {
@@ -65,7 +66,7 @@ nav ul li a.active {
 }
 
 .search-container input[type="text"]:focus {
-    width: 230px;
+    width: 300px;
     outline: none;
 }
 
@@ -182,6 +183,90 @@ nav ul li a.active {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* Footer Styles */
+footer {
+    background-color: #101214;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links,
+.footer-info {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-links ul,
+.footer-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li,
+.footer-info ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a,
+.footer-info ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover,
+.footer-info ul li a:hover {
+    color: #ffc107;
+}
+
+.footer-contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-contact ul li {
+    margin-bottom: 10px;
+}
+
+.footer-contact ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-contact ul li a:hover {
+    color: #ffc107;
+}
+
+
+.footer-disclaimer {
+    margin-top: 20px;
+}
+
+.footer-disclaimer p {
+    margin: 5px 0;
+}
+
+.footer-legal {
+    margin-top: 20px;
+}
+
+.footer-legal p {
+    margin: 5px 0;
+}
+
+.footer-legal p a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.footer-legal p a:hover {
+    color: #ffc107;
+}
+
+
 
 /*Phone View*/
 /* Add this media query at the end of your CSS */
@@ -197,12 +282,12 @@ nav ul li a.active {
 
     nav ul li {
         margin-right: 10px; /* Reduce margin between navigation items */
-        font-size: 14px;
+        font-size: 10px;
     }
 
     nav ul li a.active {
         font-weight: bold; /* Change to desired active style */
-        /* font-size: 16px; */
+        font-size: 16px;
     }
 
     .section-title {
@@ -265,7 +350,7 @@ nav ul li a.active {
     }
 
     nav ul.active {
-        margin-right: 23px;
+        margin-right: 14px;
         display: flex;
     }
 
@@ -277,6 +362,11 @@ nav ul li a.active {
     }
 
     nav ul li a {
-        font-size: 18px;
+        font-size: 13px;
+    }
+
+    .search-container input[type="text"]:focus {
+        width: 230px;
+        outline: none;
     }
 }
