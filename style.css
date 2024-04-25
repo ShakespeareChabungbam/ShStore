@@ -19,7 +19,7 @@ header {
 
 header h1 {
     margin: 0;
-    transform: translateX(-5%);
+    /* transform: translateX(-3%); */
 }
 
 nav ul {
@@ -37,7 +37,6 @@ nav ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
-    transform: translateX(-5%);
 }
 
 nav ul li a:hover {
@@ -48,8 +47,42 @@ nav ul li a.active {
     font-weight: bold; /* Change to desired active style */
     font-size: 23px;
     text-decoration: underline;
-    transform: translateX(-5%);
 }
+
+.search-container {
+    display: inline-block;
+    position: relative;
+}
+
+.search-container input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: width 0.4s ease-in-out;
+}
+
+.search-container input[type="text"]:focus {
+    width: 300px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 8px 10px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-container button:hover {
+    background: #0056b3;
+}
+
+
 
 .section-title {
     text-align: center;
@@ -118,13 +151,14 @@ nav ul li a.active {
     background-color: #0056b3;
 }
 
-/* Menu Toggle Button */
 .menu-toggle {
+    display: none; /* Hide by default */
     cursor: pointer;
     padding: 10px;
     position: absolute;
     right: 20px;
     top: 20px;
+    transition: transform 0.9s; /* Add transition for smooth transformation */
 }
 
 .bar {
@@ -132,46 +166,116 @@ nav ul li a.active {
     height: 3px;
     background-color: white;
     margin: 5px 0;
-    transition: transform 0.3s ease; /* Add transition for smooth effect */
 }
 
-/* Adjust styles for mobile navigation */
-nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #101214;
-    width: 100%;
-    position: absolute;
-    top: 60px; /* Adjust based on header height */
-    right: 0;
-    transition: all 0.3s ease-in-out;
-    display: none;
+/* Styles for cross button animation */
+.menu-toggle.cross .bar:first-child {
+    transform: rotate(45deg) translate(6px, 6px);
 }
 
-nav ul.active {
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-nav ul li a {
-    font-size: 18px;
-}
-
-/* Show menu toggle button */
-.menu-toggle.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(-45deg);
-}
-
-.menu-toggle.active .bar:nth-child(2) {
+.menu-toggle.cross .bar:nth-child(2) {
     opacity: 0;
 }
 
-.menu-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(45deg);
+.menu-toggle.cross .bar:last-child {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/*Phone View*/
+/* Add this media query at the end of your CSS */
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: px; /* Reduce padding for header */
+    }
+
+    header h1 {
+        font-size: 25px; /* Reduce font size for header title */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Reduce margin between navigation items */
+        font-size: 14px;
+    }
+
+    nav ul li a.active {
+        font-weight: bold; /* Change to desired active style */
+        font-size: 16px;
+    }
+
+    .section-title {
+        margin-top: 100px; /* Adjust margin-top for section title */
+    }
+
+    .app-container {
+        padding-top: 6px; /* Adjust padding-top for app container */
+    }
+
+    .app-card {
+        margin: 10px 20px; /* Adjust margin for app card */
+        width: 106px;
+        height: 213px;
+    }
+    .app-card h2 {
+        font-size: 12px;
+    }
+    .app-card p {
+        font-size: 9px;
+    }
+
+    .app-icon {
+        width: 60px; /* Adjust width for app icon */
+        height: 60px; /* Adjust height for app icon */
+        margin-bottom: 10px; /* Adjust margin for app icon */
+    }
+
+    .app-name {
+        font-size: 18px; /* Reduce font size for app name */
+    }
+
+    .app-details {
+        font-size: 14px; /* Reduce font size for app details */
+    }
+
+    .download-button {
+        padding: 6px 12px; /* Adjust padding for download button */
+        margin-top: 3px; /* Adjust margin-top for download button */
+    }
+
+    /* Show menu toggle button */
+    .menu-toggle {
+        display: block;
+        margin-right: 23px;
+        transform: translateY(-27%);
+    }
+
+    /* Adjust styles for mobile navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #101214;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        transition: all 0.3s ease-in-out;
+        display: none;
+    }
+
+    nav ul.active {
+        margin-right: 23px;
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
 }
