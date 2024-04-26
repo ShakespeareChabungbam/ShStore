@@ -19,12 +19,12 @@
             <ul>
                 <li>
                     <div class="search-container">
-                        <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="Search Courses">
-                        <button onclick="searchApps()">Search</button>
+                        <input type="text" id="searchInput" placeholder="Search Courses">
+                        <button onclick="searchCourses()">Search</button>
                     </div>
                 </li>
                 <li><a href="index.html" >Home</a></li>
-                <li><a href="course.html"class="active">Course</a></li>
+                <li><a href="course.html" class="active">Course</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Purchase</a></li>
             </ul>
@@ -73,15 +73,10 @@
                     </div>
                 </div>
             </div>
-            <a href="https://chat.whatsapp.com/EcBUJluLJWi1IsJQCxa73P"><button class="next-button">Join</button></a>
+            <a href="https://chat.whatsapp.com/KQus2XpYuqbDDnRrRH720I"><button class="next-button">Join</button></a>
         </div>
     </div>
     
-    
-    
-
-
-
     <footer>
         <div class="footer-links">
             <h4>Shop and Learn</h4>
@@ -89,7 +84,6 @@
                 <li><a href="index.html">Store</a></li>
                 <li><a href="course.html">Course</a></li>
                 <li><a href="#">Free link button</a></li>
-                <!-- Add more links as needed -->
             </ul>
         </div>
         <div class="footer-info">
@@ -98,7 +92,6 @@
                 <li><a href="#">Account</a></li>
                 <li><a href="#">Manage Your Sh ID</a></li>
                 <li><a href="#">Sh Store Account</a></li>
-                <!-- Add more links as needed -->
             </ul>
         </div>
         <div class="footer-info">
@@ -107,11 +100,8 @@
                 <li><a href="#">Sh Music</a></li>
                 <li><a href="#">Sh Movie</a></li>
                 <li><a href="#">Sh Game Store</a></li>
-                <!-- Add more links as needed -->
             </ul>
         </div>
-        <!-- Repeat the structure for other sections -->
-        
         <div class="footer-contact">
             <h4>Contact Sh</h4>
             <ul>
@@ -119,40 +109,35 @@
                 <li><a href="https://instagram.com/shakespearechabungbam" target="_blank">Instagram</a></li>
             </ul>
         </div>
-        
-    
         <div class="footer-disclaimer">
             <p>Copyright © 2024 Sh. All rights reserved.</p>
         </div>
-    
         <div class="footer-legal">
             <p>
                 <a href="#">Privacy Policy</a> 
                 <a href="#">Terms of Use</a> 
                 <a href="#">Sales Policy</a> 
-                <a href="#">Legal</a> 
+                <a href="#">Legal</a>
+            </p>
         </div>
     </footer>
 
-
     <script>
         function togglePremiumDetails() {
-    var details = document.getElementById("premiumDetails");
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
-    } else {
-        details.style.display = "none";
-    }
-}
+            var details = document.getElementById("premiumDetails");
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
 
-function closePremiumDetails() {
-    var premiumDetails = document.getElementById("premiumDetails");
-    premiumDetails.style.display = "none";
-}
+        function closePremiumDetails() {
+            var premiumDetails = document.getElementById("premiumDetails");
+            premiumDetails.style.display = "none";
+        }
 
-
-
-function toggleDetails() {
+        function toggleDetails() {
             var details = document.querySelector('.forex-details');
             details.style.display = details.style.display === 'block' ? 'none' : 'block';
         }
@@ -165,14 +150,36 @@ function toggleDetails() {
         function toggleMenu() {
             var navMenu = document.querySelector('nav ul');
             navMenu.classList.toggle('active');
-
-            // Toggle blur effect on the body
             document.body.classList.toggle('blur');
-            
-            // Toggle cross icon on menu toggle button
             var menuToggle = document.querySelector('.menu-toggle');
             menuToggle.classList.toggle('cross');
         }
+
+        function searchCourses() {
+    var input, filter, container, cards, card, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    cards = document.querySelectorAll(".card");
+
+    // Iterate over each course card
+    for (i = 0; i < cards.length; i++) {
+        card = cards[i];
+        // Get the course name from the card and convert it to uppercase
+        txtValue = card.querySelector(".Cname").innerText.toUpperCase();
+        
+        // Check if the search term is found in the course name
+        if (txtValue.indexOf(filter) > -1) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    }
+}
+
+// Attach an event listener to the search input for the 'input' event
+document.getElementById("searchInput").addEventListener("input", searchCourses);
+
+
     </script>
     
 </body>
