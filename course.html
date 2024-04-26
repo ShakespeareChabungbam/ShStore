@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sh Store</h1>
+        <!-- Menu toggle button -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <div class="search-container">
+                        <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="Search Courses">
+                        <button onclick="searchApps()">Search</button>
+                    </div>
+                </li>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="course.html"class="active">Course</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Purchase</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <div class="section-title">
+        <h2>Courses Section</h2>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img src="Excel.png" alt="Icon" class="Cicon">
+            <h2 class="Cname">MSExcel</h2>
+            <div class="Cdetails-container">
+                <p class="Cdetails">
+                    <span class="original-price">Rs 999</span> <span class="free-price">Free</span>
+                    <button class="premium-label" onclick="togglePremiumDetails()">Premium</button>
+                </p>
+                <div class="premium-details" id="premiumDetails">
+                    <div class="premium-content">
+                        <button class="close-btn" onclick="closePremiumDetails()">Close</button>
+                        <p>MASTER 190+ EXCEL FORMULAS USING AI<br>
+                        CREATE DASHBOARDS IN MINUTES AND ANALYSE DATA IN SECONDS</p>
+                        <a href="#" class="join-btn" target="_blank">Comming soon!</a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://chat.whatsapp.com/EcBUJluLJWi1IsJQCxa73P"><button class="next-button">Join</button></a>
+        </div>
+
+        
+        <div class="card">
+            <img src="Forex.png" alt="Icon" class="Cicon">
+            <h2 class="Cname">Forex</h2>
+            <div class="Cdetails-container">
+                <p class="Cdetails">
+                    <span class="original-price">Rs 12,999</span> <span class="free-price">Rs 9,999</span>
+                    <button class="ForexDetails-label" onclick="toggleDetails()">Details</button>
+                </p>
+                <div class="forex-details" id="premiumDetails">
+                    <div class="forex-content">
+                        <button class="close-btn" onclick="closeDetails()">Close</button>
+                        <p>Work collaboratively with Trade House Academy. <br>For more details, click on the button and join.</p>
+                        <a href="#" class="join-btn" target="_blank">Join</a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://chat.whatsapp.com/EcBUJluLJWi1IsJQCxa73P"><button class="next-button">Join</button></a>
+        </div>
+    </div>
+    
+    
+    
+
+
+
+    <footer>
+        <div class="footer-links">
+            <h4>Shop and Learn</h4>
+            <ul>
+                <li><a href="index.html">Store</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="#">Free link button</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </div>
+        <div class="footer-info">
+            <h4>Sh Wallet</h4>
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Manage Your Sh ID</a></li>
+                <li><a href="#">Sh Store Account</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </div>
+        <div class="footer-info">
+            <h4>Entertainment</h4>
+            <ul>
+                <li><a href="#">Sh Music</a></li>
+                <li><a href="#">Sh Movie</a></li>
+                <li><a href="#">Sh Game Store</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </div>
+        <!-- Repeat the structure for other sections -->
+        
+        <div class="footer-contact">
+            <h4>Contact Sh</h4>
+            <ul>
+                <li><a href="https://wa.me/918837067635" target="_blank">WhatsApp</a></li>
+                <li><a href="https://instagram.com/shakespearechabungbam" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+        
+    
+        <div class="footer-disclaimer">
+            <p>Copyright © 2024 Sh. All rights reserved.</p>
+        </div>
+    
+        <div class="footer-legal">
+            <p>
+                <a href="#">Privacy Policy</a> 
+                <a href="#">Terms of Use</a> 
+                <a href="#">Sales Policy</a> 
+                <a href="#">Legal</a> 
+        </div>
+    </footer>
+
+
+    <script>
+        function togglePremiumDetails() {
+    var details = document.getElementById("premiumDetails");
+    if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block";
+    } else {
+        details.style.display = "none";
+    }
+}
+
+function closePremiumDetails() {
+    var premiumDetails = document.getElementById("premiumDetails");
+    premiumDetails.style.display = "none";
+}
+
+
+
+function toggleDetails() {
+            var details = document.querySelector('.forex-details');
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function closeDetails() {
+            var details = document.querySelector('.forex-details');
+            details.style.display = 'none';
+        }
+
+        function toggleMenu() {
+            var navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('active');
+
+            // Toggle blur effect on the body
+            document.body.classList.toggle('blur');
+            
+            // Toggle cross icon on menu toggle button
+            var menuToggle = document.querySelector('.menu-toggle');
+            menuToggle.classList.toggle('cross');
+        }
+    </script>
+    
+</body>
+</html>
