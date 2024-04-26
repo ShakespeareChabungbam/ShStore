@@ -266,6 +266,188 @@ footer {
     color: #ffc107;
 }
 
+/* Courses */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.Cicon {
+    width: 100%;
+    height: 56.25%; /* 16:9 aspect ratio */
+    margin: 0 auto 20px;
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.Cname {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.Cdetails-container {
+    position: relative;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    transition: color 0.5s, text-decoration 0.5s;
+}
+
+.free-price {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.free-price {
+    color: green;
+    font-weight: bold;
+}
+
+.premium-label {
+    position: absolute;
+    bottom: -30px; /* Adjust bottom spacing as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: gold;
+    color: #333;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.premium-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+.premium-content {
+    text-align: center;
+}
+
+.close-btn {
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.premium-content p {
+    margin-bottom: 20px;
+}
+
+.join-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 115px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.join-btn:hover {
+    background-color: #0056b3;
+}
+
+.next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #0056b3;
+}
+
+.close-btn:hover{
+    border-radius: 100px;
+    color: #fff;
+    background-color: #b90909;
+}
+.premium-label:hover {
+    background-color: #c3b410;
+}
+
+
+
+.ForexDetails-label{
+    position: absolute;
+    bottom: -30px; /* Adjust bottom spacing as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: rgb(10, 11, 11);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.forex-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 90%;
+    z-index: 1000;
+}
+
+
+
+.join-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.join-btn:hover {
+    background-color: #0056b3;
+}
 
 
 /*Phone View*/
