@@ -551,4 +551,60 @@ footer {
         width: 230px;
         outline: none;
     }
+
+
+
+
+    .container {
+        padding-top: 6px;
+    }
+
+    .card {
+        width: 106px;
+        height: 213px;
+        margin: 10px 20px; 
+    }
+
+    .card h2 {
+        font-size: 12px;
+    }
+    .card p {
+        font-size: 9px;
+    }
+
+    .Cicon {
+        width: 100px; /* Adjust width for app icon */
+        height: 68px; /* Adjust height for app icon */
+        margin-bottom: 3px; /* Adjust margin for app icon */
+    }
+
+    .Cname {
+        font-size: 18px; /* Reduce font size for app name */
+    }
+
+    .premium-label {
+        bottom: -25px; /* Adjust bottom spacing as needed */
+    }
+
+    .ForexDetails-label {
+        bottom: -25px; /* Adjust bottom spacing as needed */
+    }
+
+    .join-btn {
+        padding: 6px 12px; /* Adjust padding for smaller size */
+        font-size: 14px; /* Optionally adjust font size for better readability */
+    }
+
+    .next-button {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+    .premium-label {
+        padding: 2px 5px;
+    }
+
+    .ForexDetails-label {
+        padding: 2px 5px;
+    }
 }
