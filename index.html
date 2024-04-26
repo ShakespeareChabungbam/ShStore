@@ -19,40 +19,64 @@
             <ul>
                 <li>
                     <div class="search-container">
-                        <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="Search Application">
-                        <button onclick="searchApps()">Search</button>
+                        <input type="text" id="searchInput" placeholder="Search Courses">
+                        <button onclick="searchCourses()">Search</button>
                     </div>
                 </li>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="course.html">Course</a></li>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="course.html" class="active">Course</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Purchase</a></li>
             </ul>
-            
         </nav>
     </header> 
 
     <div class="section-title">
-        <h2>Application Section</h2>
+        <h2>Courses Section</h2>
     </div>
 
-    <div class="app-container">
-        <div class="app-card" id="shnotes">
-            <img src="ShNotes.jpg" alt="ShNotes Icon" class="app-icon">
-            <h2 class="app-name">ShNotes</h2>
-            <p class="app-details">This is a basic Notes taking Application made using Flutter and sqflite database for storing your daily notes and reminders.</p>
-            <button class="download-button" onclick="downloadApp('shnotes.apk')">Download</button>
+    <div class="container">
+        <div class="card">
+            <img src="Excel.png" alt="Icon" class="Cicon">
+            <h2 class="Cname">MSExcel</h2>
+            <div class="Cdetails-container">
+                <p class="Cdetails">
+                    <span class="original-price">Rs 999</span> <span class="free-price">Free</span>
+                    <button class="premium-label" onclick="togglePremiumDetails()">Premium</button>
+                </p>
+                <div class="premium-details" id="premiumDetails">
+                    <div class="premium-content">
+                        <button class="close-btn" onclick="closePremiumDetails()">Close</button>
+                        <p>MASTER 190+ EXCEL FORMULAS USING AI<br>
+                        CREATE DASHBOARDS IN MINUTES AND ANALYSE DATA IN SECONDS</p>
+                        <a href="#" class="join-btn" target="_blank">Comming soon!</a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://chat.whatsapp.com/EcBUJluLJWi1IsJQCxa73P"><button class="next-button">Join</button></a>
         </div>
-        <div class="app-card" id="shcalculator">
-            <img src="ShCalculator.png" alt="ShCalculator Icon" class="app-icon">
-            <h2 class="app-name">ShCalculator</h2>
-            <p class="app-details">This is a basic calculator Application made using Flutter for calculating problems. It also has theme features.</p>
-            <button class="download-button" onclick="downloadApp('shcalculator.apk')">Download</button>
+
+        
+        <div class="card">
+            <img src="Forex.png" alt="Icon" class="Cicon">
+            <h2 class="Cname">Forex</h2>
+            <div class="Cdetails-container">
+                <p class="Cdetails">
+                    <span class="original-price">Rs 12,999</span> <span class="free-price">Rs 9,999</span>
+                    <button class="ForexDetails-label" onclick="toggleDetails()">Details</button>
+                </p>
+                <div class="forex-details" id="premiumDetails">
+                    <div class="forex-content">
+                        <button class="close-btn" onclick="closeDetails()">Close</button>
+                        <p>Work collaboratively with Trade House Academy. <br>For more details, click on the button and join.</p>
+                        <a href="#" class="join-btn" target="_blank">Join</a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://chat.whatsapp.com/KQus2XpYuqbDDnRrRH720I"><button class="next-button">Join</button></a>
         </div>
     </div>
-
     
-
     <footer>
         <div class="footer-links">
             <h4>Shop and Learn</h4>
@@ -60,7 +84,6 @@
                 <li><a href="index.html">Store</a></li>
                 <li><a href="course.html">Course</a></li>
                 <li><a href="#">Free link button</a></li>
-                <!-- Add more links as needed -->
             </ul>
         </div>
         <div class="footer-info">
@@ -69,7 +92,6 @@
                 <li><a href="#">Account</a></li>
                 <li><a href="#">Manage Your Sh ID</a></li>
                 <li><a href="#">Sh Store Account</a></li>
-                <!-- Add more links as needed -->
             </ul>
         </div>
         <div class="footer-info">
@@ -78,11 +100,8 @@
                 <li><a href="#">Sh Music</a></li>
                 <li><a href="#">Sh Movie</a></li>
                 <li><a href="#">Sh Game Store</a></li>
-                <!-- Add more links as needed -->
             </ul>
         </div>
-        <!-- Repeat the structure for other sections -->
-        
         <div class="footer-contact">
             <h4>Contact Sh</h4>
             <ul>
@@ -90,80 +109,78 @@
                 <li><a href="https://instagram.com/shakespearechabungbam" target="_blank">Instagram</a></li>
             </ul>
         </div>
-        
-    
         <div class="footer-disclaimer">
             <p>Copyright © 2024 Sh. All rights reserved.</p>
         </div>
-    
         <div class="footer-legal">
             <p>
                 <a href="#">Privacy Policy</a> 
                 <a href="#">Terms of Use</a> 
                 <a href="#">Sales Policy</a> 
-                <a href="#">Legal</a> 
+                <a href="#">Legal</a>
+            </p>
         </div>
     </footer>
-    
-    
 
     <script>
-        function downloadApp(apkUrl) {
-            var downloadButton = event.target;
-            downloadButton.innerText = 'Downloading...';
-            downloadButton.disabled = true;
-
-            // Create a temporary anchor element
-            var tempAnchor = document.createElement('a');
-            tempAnchor.href = apkUrl;
-            tempAnchor.setAttribute('download', '');
-            tempAnchor.style.display = 'none';
-            document.body.appendChild(tempAnchor);
-
-            // Trigger a click event on the temporary anchor
-            tempAnchor.click();
-
-            // Clean up
-            document.body.removeChild(tempAnchor);
-
-            // Simulate download completion after 2 seconds
-            setTimeout(function() {
-                downloadButton.innerText = 'Downloaded';
-            }, 2000);
+        function togglePremiumDetails() {
+            var details = document.getElementById("premiumDetails");
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
         }
 
-        // Menu toggle function
+        function closePremiumDetails() {
+            var premiumDetails = document.getElementById("premiumDetails");
+            premiumDetails.style.display = "none";
+        }
+
+        function toggleDetails() {
+            var details = document.querySelector('.forex-details');
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function closeDetails() {
+            var details = document.querySelector('.forex-details');
+            details.style.display = 'none';
+        }
+
         function toggleMenu() {
             var navMenu = document.querySelector('nav ul');
             navMenu.classList.toggle('active');
-
-            // Toggle blur effect on the body
             document.body.classList.toggle('blur');
-            
-            // Toggle cross icon on menu toggle button
             var menuToggle = document.querySelector('.menu-toggle');
             menuToggle.classList.toggle('cross');
         }
 
-        // Search functionality
-        function searchApps() {
-            var input, filter, appContainer, cards, card, i, txtValue;
-            input = document.getElementById('searchInput');
-            filter = input.value.toUpperCase();
-            appContainer = document.querySelector('.app-container');
-            cards = appContainer.getElementsByClassName('app-card');
+        function searchCourses() {
+    var input, filter, container, cards, card, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    cards = document.querySelectorAll(".card");
 
-            for (i = 0; i < cards.length; i++) {
-                card = cards[i];
-                txtValue = card.textContent || card.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    card.style.display = ''; // Show matched cards
-                } else {
-                    card.style.display = 'none'; // Hide unmatched cards
-                }
-            }
+    // Iterate over each course card
+    for (i = 0; i < cards.length; i++) {
+        card = cards[i];
+        // Get the course name from the card and convert it to uppercase
+        txtValue = card.querySelector(".Cname").innerText.toUpperCase();
+        
+        // Check if the search term is found in the course name
+        if (txtValue.indexOf(filter) > -1) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
         }
-    </script>
+    }
+}
 
+// Attach an event listener to the search input for the 'input' event
+document.getElementById("searchInput").addEventListener("input", searchCourses);
+
+
+    </script>
+    
 </body>
 </html>
