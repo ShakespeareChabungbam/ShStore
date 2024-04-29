@@ -425,13 +425,12 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 400px;
-    width: 90%;
     z-index: 1000;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
 }
 
 
@@ -448,6 +447,161 @@ footer {
 .join-btn:hover {
     background-color: #0056b3;
 }
+
+
+
+
+
+
+/* Books */
+.section-title-book{
+    text-align: center;
+    margin-top: 100px; /* Adjust as needed */
+}
+.logo{
+    margin-top: 200px;
+}
+.logo_book {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.logo_tag {
+    max-width: 50%;
+}
+
+.logo_tag h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.logo_tag h1 span {
+    color: #007bff;
+}
+
+.logo_tag p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.main_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main_btn:hover {
+    background-color: #0056b3;
+}
+
+.main_img img {
+    max-width: 80%;
+}
+
+
+
+
+.books-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.books {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between books */
+    vertical-align: top;
+    width: 200px; /* Adjust book container width as needed */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+.book {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between books */
+    vertical-align: top;
+    width: 200px; /* Adjust book container width as needed */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-align: center; /* Center align content */
+}
+
+.book img {
+    width: 150px; /* Set a specific width for the book images */
+    height: 200px; /* Set a specific height for the book images */
+    object-fit: cover; /* Ensure the images cover the entire container */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.book h2, .book h3 {
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+
+
+.rating {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.buy-btn, .download-btn {
+    padding: 8px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover, .download-btn:hover {
+    background-color: #0056b3;
+}
+
 
 
 /*Phone View*/
@@ -611,4 +765,48 @@ footer {
     .ForexDetails-label {
         padding: 2px 5px;
     }
+
+    .forex-details {
+        max-width: 50%;
+    }
+    
+
+
+    /* Books */
+    .section-title-book {
+        text-align: center;
+        margin-top: 50px; /* Adjust as needed */
+    }
+    
+    .logo_book {
+        flex-direction: column-reverse; /* Stack columns vertically for phone view */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+    
+    .logo_tag {
+        max-width: 100%; /* Occupy full width for smaller screens */
+        text-align: center; /* Center align content */
+    }
+    
+    .logo_tag h1 {
+        font-size: 24px; /* Decrease font size for smaller screens */
+        margin-bottom: 10px; /* Reduce margin for smaller screens */
+    }
+    
+    .logo_tag p {
+        font-size: 14px; /* Decrease font size for smaller screens */
+        margin-bottom: 10px; /* Reduce margin for smaller screens */
+    }
+    
+    .main_img {
+        margin-top: 20px; /* Add some space between logo tag and main image */
+    }
+    
+    .main_img img {
+        max-width: 100%; /* Make the image responsive */
+    }
+    
 }
+
+
+
