@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebooks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sh Store</h1>
+        <!-- Menu toggle button -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <div class="search-container">
+                        <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Search Books">
+                        <button onclick="searchBooks()">Search</button>
+                    </div>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="books.html" class="active">Books</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Purchase</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    
+    <section class="section-title-book">
+        <div class="logo_book">
+
+            <div class="logo_tag">
+                <h1>WELCOME TO<br><span>SH STORE</span></h1>
+
+                <p>
+                    Your gateway to a world of knowledge. Explore our vast collection for endless reading adventures and learning opportunities.
+                </p>
+                <a href="#" class="main_btn">Learn More</a>
+
+            </div>
+
+            <div class="main_img">
+                <img src="Books/Icon/blogo.png">
+            </div>
+
+        </div> 
+    </section>
+        
+
+    <section class="books-container">
+        <div class="books">
+            <div class="book">
+                <img src="Books/BooksIcon/To kill a mockingbird.jpg" alt="Book 1">
+                <h2>Title</h2>
+                <h3>Subtitle</h3>
+                <div class="rating">
+                    <!-- Add rating stars here -->
+                </div>
+                <div class="buttons">
+                    <button class="buy-btn">Buy</button>
+                    <button class="download-btn">Download</button>
+                </div>
+            </div>
+            <!-- Add more books similarly -->
+            <div class="book">
+                <img src="Books/BooksIcon/To kill a mockingbird.jpg" alt="Book 1">
+                <h2>Title</h2>
+                <h3>Subtitle</h3>
+                <div class="rating">
+                    <!-- Add rating stars here -->
+                </div>
+                <div class="buttons">
+                    <button class="buy-btn">Buy</button>
+                    <button class="download-btn">Download</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="footer-links">
+            <h4>Shop and Learn</h4>
+            <ul>
+                <li><a href="index.html">Store</a></li>
+                <li><a href="course.html">Course</a></li>
+                <li><a href="books.html">Books</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <h4>Sh Wallet</h4>
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Manage Your Sh ID</a></li>
+                <li><a href="#">Sh Store Account</a></li>
+            </ul>
+        </div>
+        <div class="footer-info">
+            <h4>Entertainment</h4>
+            <ul>
+                <li><a href="#">Sh Music</a></li>
+                <li><a href="#">Sh Movie</a></li>
+                <li><a href="#">Sh Game Store</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Sh</h4>
+            <ul>
+                <li><a href="https://wa.me/918837067635" target="_blank">WhatsApp</a></li>
+                <li><a href="https://instagram.com/shakespearechabungbam" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-disclaimer">
+            <p>Copyright © 2024 Sh. All rights reserved.</p>
+        </div>
+        <div class="footer-legal">
+            <p>
+                <a href="#">Privacy Policy</a> 
+                <a href="#">Terms of Use</a> 
+                <a href="#">Sales Policy</a> 
+                <a href="#">Legal</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('blur');
+            var menuToggle = document.querySelector('.menu-toggle');
+            menuToggle.classList.toggle('cross');
+        }
+
+    </script>
+</body>
+</html>
